@@ -1,0 +1,8 @@
+<li>
+	<%= recipient.name %><br>
+	<%= recipient.email %><br>
+	<% if recipient.phone %>
+		<%= recipient.phone %><br>
+	<% end %>
+	<%= format_time(recipient.created_at) %>
+</li>
