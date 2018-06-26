@@ -1,4 +1,4 @@
-class RecipientController < ApplicationController
+class RecipientsController < ApplicationController
 
 	def index
 		@recipients = Recipient.all
