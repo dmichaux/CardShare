@@ -12,7 +12,7 @@ class RecipientsController < ApplicationController
 		@recipient = Recipient.new(recipient_params)
 		if @recipient.save
 			@recipient.send_card(current_user)
-			flash[:notice] = "Card sent to #{@recipient.name}"
+			flash[:success] = "Card sent to #{@recipient.name}"
 			redirect_to root_path
 		else
 			render :new

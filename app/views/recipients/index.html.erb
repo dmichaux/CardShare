@@ -1,8 +1,8 @@
-<%= link_to "Home", root_path %>
+<%= link_to "Home", root_path, class: "btn btn-secondary btn-sm" %><br><br>
 <% if @recipients.any? %>
-	<ul>
+	<ol class="list-group">
 		<%= render @recipients %>
-	</ul>
+	</ol>
 <% else %>
 	No recipients yet. Go meet some people!
 <% end %>

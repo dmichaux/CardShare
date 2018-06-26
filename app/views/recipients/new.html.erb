@@ -1,19 +1,22 @@
-<%= link_to "Home", root_path %>
 <%= form_for @recipient do |f| %>
 	
 	<%= render "shared/error_messages", object: f.object %>
 
 	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<%= f.text_field :name, class: "form-control" %>
 
 	<%= f.label :company %>
-	<%= f.text_field :company %>
+	<%= f.text_field :company, class: "form-control",
+														 placeholder: "optional" %>
 
 	<%= f.label :email %>
-	<%= f.email_field :email %>
+	<%= f.email_field :email, class: "form-control" %>
 
 	<%= f.label :phone %>
-	<%= f.telephone_field :phone %>
+	<%= f.telephone_field :phone, class: "form-control",
+																placeholder: "optional" %><br>
 
-	<%= f.submit "Send a Card" %>
+	<%= f.submit "Send a Card", class: "btn btn-primary btn-sm" %>
 <% end %>
+
+<br><br><%= link_to "Home", root_path, class: "btn btn-secondary btn-sm" %>
