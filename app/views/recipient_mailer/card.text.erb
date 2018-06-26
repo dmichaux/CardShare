@@ -1,6 +1,12 @@
 Hi <%= @recipient.name %>; it was great to meet you today.
-Here's my card (sent from CardShare):
+Here's my information:
+
+<%= @current_user.title %>
+<%= @current_user.phone %> | <%= @current_user.email %>
+<%= @current_user.github %> | <%= @current_user.linkedin %>
 
 
 Sincerely,
 <%= @current_user.name %>
+
+sent from CardShare
