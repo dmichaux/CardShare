@@ -1,7 +1,7 @@
-<h1>CardShare</h1>
-
 <% if user_signed_in? %>
-	<%= current_user.name %>'s Cards
+	<h2><%= current_user.name %>'s Cards</h2>
+	<%= button_to "Send a Card", new_recipient_path %>
+	<%= button_to "Follow Up", recipients_path %>
 	<%= link_to "Logout", destroy_user_session_path, method: :delete %>
 <% else %>
 	<%= render 'devise/sessions/new' %>
