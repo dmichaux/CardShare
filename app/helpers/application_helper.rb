@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def format_time(time)
+    time.localtime.strftime('%A, %-m/%-d/%Y %I:%M %p')
+  end
+
 	# Helpers for Devise forms
   def resource_name
     :user
