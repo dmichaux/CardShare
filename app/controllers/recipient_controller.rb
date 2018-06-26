@@ -1,5 +1,9 @@
 class RecipientController < ApplicationController
 
+	def index
+		@recipients = Recipient.all
+	end
+
 	def new
 		@recipient = Recipient.new
 	end
