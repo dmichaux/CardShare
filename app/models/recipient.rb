@@ -10,4 +10,14 @@ class Recipient < ApplicationRecord
 										format: { with: VALID_EMAIL_REGEX },
 										uniqueness: { case_sensitive: false}
 	validates :phone, format: { with: /\A\d{3}-\d{3}-\d{4}\z/ }
+
+	def send_card(current_user)
+		RecipientMailer.card(self, current_user).deliver_now
+	end
+
+	private
+
+	def downcase_email
+		self.email.downcase!
+	end
 end
