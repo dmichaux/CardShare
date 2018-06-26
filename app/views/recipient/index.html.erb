@@ -1,0 +1,7 @@
+<% if @recipients.any? %>
+	<ul>
+		<%= render @recipients %>
+	</ul>
+<% else %>
+	No recipients yet. Go meet some people!
+<% end %>
