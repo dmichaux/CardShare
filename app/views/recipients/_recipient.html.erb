@@ -1,10 +1,10 @@
 <li class="list-group-item list-group-item-dark">
 	<%= recipient.name %><br>
-	<% if recipient.company %>
+	<% if recipient.company.present? %>
 		<%= recipient.company %><br>
 	<% end %>
 	<%= recipient.email %><br>
-	<% if recipient.phone %>
+	<% if recipient.phone.present? %>
 		<%= recipient.phone %><br>
 	<% end %>
 	<%= format_time(recipient.created_at) %>
