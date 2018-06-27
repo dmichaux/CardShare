@@ -12,6 +12,7 @@ class Recipient < ApplicationRecord
 
 	def send_card(current_user)
 		RecipientMailer.card(self, current_user).deliver_now
+		UserMailer.confirmation(current_user, self).deliver_now
 	end
 
 	private
