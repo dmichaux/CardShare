@@ -1,0 +1,20 @@
+<p>
+  Hi <%= @current_user.name %>.
+  Your card has been sent to <%= @recipient.name %>.
+</p>
+
+<div style="margin-left: 5px; display: inline-block; border: 2px solid blue; border-radius: 8px;">
+	<div style="display: inline-block; padding: 5px;">
+		<%= gravatar_for @current_user %>
+	</div>
+	<div style="display: inline-block; padding: 5px; float: right;">
+		<b><%= @current_user.name %></b><br>
+		<%= @current_user.title %><br><br>
+		<%= @current_user.phone %> | 
+		<%= @current_user.email %><br>
+		<%= link_to @current_user.github, @current_user.github %> | 
+		<%= link_to @current_user.linkedin, @current_user.linkedin %>
+	</div>
+</div>
+
+<p>Thanks for using CardShare</p>
