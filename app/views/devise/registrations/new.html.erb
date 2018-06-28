@@ -1,29 +1,55 @@
+<%= link_to "Home", root_path, class: "btn btn-secondary btn-sm" %><br><br>
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, autofocus: true %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.email_field :email, autocomplete: "email" %>
+  </div><br>
 
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <% end %><br>
     <%= f.password_field :password, autocomplete: "off" %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="row">
+    <div class="col"><hr></div>
+    <div class="col-auto">Card Information</div>
+    <div class="col"><hr></div>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :github, "GitHub URL" %><br>
+    <%= f.text_field :github %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :linkedin, "LinkedIn URL" %><br>
+    <%= f.text_field :linkedin %>
+  </div><br>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

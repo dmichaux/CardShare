@@ -4,5 +4,9 @@
 	<%= current_user.name %> | 
 	<%= link_to "Logout", destroy_user_session_path, method: :delete %>
 <% else %>
-	<%= render 'devise/sessions/new' %>
+	<%= render 'devise/sessions/new' %><br>
+	<p>
+		New to CardShare? 
+		<%= link_to "Sign Up", new_user_registration_path %></p>
+	</p>
 <% end %>
