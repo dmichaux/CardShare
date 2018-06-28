@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def format_time(time)
-    time.localtime.strftime('%A, %-m/%-d/%Y %I:%M %p')
+    time.strftime('%A %-m/%-d/%Y, %I:%M %p')
   end
 
   # Returns a Gravatar image for given user
