@@ -1,5 +1,7 @@
 class Recipient < ApplicationRecord
 
+	belongs_to :user
+
 	default_scope -> { order(:name) }
 
 	before_save :downcase_email
