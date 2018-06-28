@@ -7,5 +7,5 @@
 	<% if recipient.phone.present? %>
 		<%= recipient.phone %><br>
 	<% end %>
-	<%= format_time(recipient.created_at) %>
+	<%= format_time(recipient.card_sent_at) %>
 </li>

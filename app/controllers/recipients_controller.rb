@@ -10,6 +10,7 @@ class RecipientsController < ApplicationController
 
 	def create
 		@recipient = Recipient.new(recipient_params)
+		@recipient.card_sent_at = Time.current
 		if @recipient.save
 			@recipient.send_card(current_user)
 			flash[:success] = "Card sent to #{@recipient.name}"
