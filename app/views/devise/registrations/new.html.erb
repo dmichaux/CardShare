@@ -7,25 +7,29 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name, autofocus: true %>
-  </div><br>
+    <%= f.text_field :name, class: "form-control",
+                      autofocus: true %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.email_field :email, autocomplete: "email" %>
-  </div><br>
+    <%= f.email_field :email, class: "form-control",
+                       autocomplete: "email" %>
+  </div>
 
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br>
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div><br>
+    <%= f.password_field :password, class: "form-control",
+                          autocomplete: "off" %>
+  </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, class: "form-control",
+                          autocomplete: "off" %>
   </div>
 
   <div class="row">
@@ -36,20 +40,20 @@
 
   <div class="field">
     <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div><br>
+    <%= f.text_field :phone, class: "form-control" %>
+  </div>
 
   <div class="field">
     <%= f.label :github, "GitHub URL" %><br>
-    <%= f.text_field :github %>
-  </div><br>
+    <%= f.text_field :github, class: "form-control" %>
+  </div>
 
   <div class="field">
     <%= f.label :linkedin, "LinkedIn URL" %><br>
-    <%= f.text_field :linkedin %>
-  </div><br>
+    <%= f.text_field :linkedin, class: "form-control" %>
+  </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "btn btn-sm btn-primary" %>
   </div>
 <% end %>
