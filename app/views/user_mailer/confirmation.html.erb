@@ -81,8 +81,8 @@
 			<h2 class="title"><%= @current_user.title %></h2>
 			<div class="phone"><%= @current_user.phone %></div>
 			<div class="email"><%= @current_user.email %></div>
-			<div class="github"><%= link_to @current_user.github, @current_user.github %></div>
-			<div class="linkdin"><%= link_to @current_user.linkedin, @current_user.linkedin %></div>
+			<div class="github"><%= link_to @current_user.github, 'https://' + @current_user.github %></div>
+			<div class="linkdin"><%= link_to @current_user.linkedin, 'https://' + @current_user.linkedin %></div>
 		</div>
 	</div>
 
